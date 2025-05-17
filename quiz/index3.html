@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Peminjaman Buku</h1>
+            <form action="" id="form-peminjaman">
+                <label for="nama">Nama Peminjam: </label>
+                <input type="text" name="nama" id="nama" required>
+                <label for="nama">Judul Buku: </label>
+                <input type="text" name="judul" id="judul" required>
+                <label for="">Tanggal Peminjaman: </label>
+                <input type="date" name="tanggal_pinjam" id="tanggal_pinjam" required>
+                <label for="">Tanggal Pengembalian: </label>
+                <input type="date" name="tanggal_pengembalian" id="tanggal_pengembalian" required>
+                <button type="submit">Pinjam</button>
+            </form>
+    </div>
+    <div class="container2">
+        <h2>Hasil Inputan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Peminjaman</th>
+                        <th>Judul Buku</th>
+                        <th>Tanggal Peninjaman</th>
+                        <th>Tanggal Pengembalian</th>
+                    </tr>
+                </thead>
+                <tbody id="hasil-tbody"></tbody>
+            </table>
+    </div>
+    <script>
+        const form = document.getElementById('form-peminjaman');
+        const hasilTbody = document.getElementById('hasil-tbody');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nama = document.getElementById('nama').value;
+            const judulBuku = document.getElementById('judul').value;
+            const tanggalPinjam = document.getElementById('tanggal_pinjam').value;
+            const tanggalPengembalian = document.getElementById('tanggal_pengembalian').value;
+            const row = document.createElement('tr');
+            row.innerHTML= `
+                <td>${nama}</td>
+                <td>${judulBuku}</td>
+                <td>${tanggalPinjam}</td>
+                <td>${tanggalPengembalian}</td>
+                `;
+                hasilTbody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
