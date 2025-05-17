@@ -1,0 +1,24 @@
+#layout {
+    float   :none;
+    height  :auto;
+    width   :784px;
+}
+#header {
+    float   :left;
+    height  :150px;
+    width   :784px;
+    background-color: linear-gradient(#ddd,#ddd, #fff, #ddd 15%);
+}
+#kolom1 {
+    float   :left;
+    height  :auto;
+    width   :584px;
+    background-color: linear-gradient(#dde8ff,#cce6ff, #cce6ff, #dde8ff 15%);
+}
+#footer {
+    float   :left;
+    height  :50px;
+    width   :784px;
+    text-align : center;
+    background-color: linear-gradient(#2266ff,#cce6ff, #2266ff, #cce6ff 15%);
+}
